@@ -1,0 +1,61 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Ingresar Usuario
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Registrar Usuario</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+
+
+<form action="/insertarUsuarios" method="post">
+
+  <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Cédula</label>
+  <input type="number"  name="ID_Usuarios"class="form-control" id="exampleFormControlInput1" placeholder="Cédula">
+</div>
+
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Nombres</label>
+  <input type="text" name="Nombre" class="form-control" id="exampleFormControlInput1" placeholder="Nombres">
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Apellidos</label>
+  <input type="text"  name="Apellidos"class="form-control" id="exampleFormControlInput1" placeholder="Apellidos">
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Correo</label>
+  <input type="text"  name="Correo"class="form-control" id="exampleFormControlInput1" placeholder="Correo">
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
+  <input type="text"  name="ContraseNa"class="form-control" id="exampleFormControlInput1" placeholder="Contraseña">
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Rol</label>
+  <input type="text"  name="Rol"class="form-control" id="exampleFormControlInput1" placeholder="Rol">
+</div>
+
+<div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary">Registrar</button>
+
+      </div>
+</form>
+      </div>
+    </div>
+  </div>
+</div>

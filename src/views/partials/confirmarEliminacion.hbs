@@ -1,0 +1,26 @@
+<!-- Botón para abrir el modal de confirmación de eliminación -->
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{ID_Usuarios}}">
+  Eliminar
+</button>
+
+<!-- Modal de confirmación de eliminación -->
+<div class="modal fade" id="exampleModal{{ID_Usuarios}}" tabindex="-1" aria-labelledby="exampleModalLabel{{ID_Usuarios}}" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel{{ID_Usuarios}}">Confirmar Eliminación de Usuario</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>¿Estás seguro de que deseas eliminar este usuario?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <!-- Formulario para enviar la solicitud POST -->
+        <form action="/confirmarEliminacion/{{ID_Usuarios}}" method="POST">
+          <button type="submit" class="btn btn-danger">Sí, eliminar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

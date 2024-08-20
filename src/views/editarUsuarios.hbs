@@ -1,0 +1,54 @@
+<!-- Cuerpo del formulario para editar usuarios -->
+<body class="formularioEditar">
+    <!-- Formulario de edición de usuarios -->
+    <form id="login-form-editarUsuarios" action="/actualizarUsuarios/{{data.ID_Usuarios}}" method="post">  
+        <!-- Conjunto de campos del formulario -->
+        <fieldset id="formularioEditarUsuariosModificado">
+        
+            <div><h2>Editar usuario</h2></div>   
+            <!-- Campo para los nombres del usuario -->
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nombres</label>
+                <input type="text" name="Nombre" value="{{Nombre}}" class="form-control" id="exampleFormControlInput1" placeholder="Nombres">
+            </div>
+
+            <!-- Campo para los apellidos del usuario -->
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Apellidos</label>
+                <input type="text" name="Apellidos" value="{{Apellidos}}" class="form-control" id="exampleFormControlInput1" placeholder="Apellidos">
+            </div>
+
+            <!-- Campo para el correo electrónico del usuario -->
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Correo</label>
+                <input type="text" name="Correo" value="{{Correo}}" class="form-control" id="exampleFormControlInput1" placeholder="Correo">
+            </div>
+
+            <!-- Campo para la contraseña del usuario -->
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
+                <input type="text" name="ContraseNa" value="{{ContraseNa}}" class="form-control" id="exampleFormControlInput1" placeholder="Contraseña">
+            </div>
+
+            <!-- Campo para el rol del usuario -->
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Rol</label>
+                <input type="text" name="Rol" value="{{Rol}}" class="form-control" id="exampleFormControlInput1" placeholder="Rol">
+            </div>
+
+            <!-- Botones de acción del formulario -->
+            <div class="modal-footer">
+                <!-- Botón para actualizar los datos -->
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+                <!-- Botón para cancelar la edición y volver a la lista de usuarios -->
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="window.location.href='/listarU'">Cancelar</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <!-- Pie de página del formulario de edición -->
+    <footer class="FooterEditar">
+        <!-- Texto de copyright -->
+        <p>&copy; 2024 Tecnológico de Medellín Institución Universitaria.</p>
+    </footer>
+</body>

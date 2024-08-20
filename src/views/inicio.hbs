@@ -1,0 +1,52 @@
+<!-- Cuerpo de la página con una imagen de fondo -->
+<body class="ImagenFondoInicio">
+    <table class="Panelimg">
+        <tr>
+            <th><img src="img/logo PNG.png" alt="Logo PNG"></th>
+            <th><img src="img/gobernacion.png" alt="Gobernación"></th>
+            <th><img src="img/gov.co.png" alt="Gobierno"></th>
+            <th><img src="img/COLCIENCIAS.png" alt="COLCIENCIAS"></th>
+        </tr>
+    </table>
+
+    <!-- Formulario de inicio de sesión -->
+    <form id="login-form-Inicio" action="/iniciarSesion" method="post">
+        <!-- Conjunto de campos del formulario -->
+        <fieldset id ='fieldset-Inicio'>
+            <div><h2>Inicio de sesión</h2></div>   
+            
+            <!-- Selección del rol -->
+            <div class="mb-3">
+                <label for="Rol">Rol:</label>
+                <select id="Rol" name="Rol" required>
+                    <option value="Estudiante">Estudiante</option>
+                    <option value="Administrador">Administrador</option>
+                </select>
+            </div>
+
+            <!-- Campo para el documento -->
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Documento:</label>
+                <input type="text" name="ID_Usuarios" class="form-control" id="exampleFormControlInput1" placeholder="Documento">
+            </div>
+
+            <!-- Campo para la contraseña -->
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Contraseña:</label>
+                <input type="text" name="ContraseNa" class="form-control" id="exampleFormControlInput1" placeholder="Contraseña">
+            </div>
+
+            <!-- Botones de acción del formulario -->
+            <div class="modal-footer">
+                <!-- Botón para cancelar el inicio de sesión -->
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="window.location.href='/'">Cancelar</button>
+                <!-- Botón para iniciar sesión -->
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <footer class="FooterInicio">
+        <p>&copy; 2024 Tecnológico de Medellín Institución Universitaria.</p>
+    </footer>
+</body>

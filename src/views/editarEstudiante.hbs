@@ -1,0 +1,33 @@
+<body class="formularioEditar">
+    <!-- Formulario de edición de usuarios -->
+    <form id="login-form-editarUsuarios" action="/actualizarEstudiante/{{data.ID_Usuarios}}" method="post">  
+        <!-- Conjunto de campos del formulario -->
+        <fieldset id="formularioEditarUsuariosModificado">
+
+            <div><h2>Editar datos</h2></div>   
+            <!-- Campo para el correo electrónico -->
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Correo</label>
+                <input type="text" name="Correo" value="{{Correo}}" class="form-control" id="exampleFormControlInput1" placeholder="Correo">
+            </div>
+
+            <!-- Campo para la contraseña -->
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
+                <input type="text" name="ContraseNa" value="{{ContraseNa}}" class="form-control" id="exampleFormControlInput1" placeholder="Contraseña">
+            </div>
+
+            <!-- Botones de acción del formulario -->
+            <div class="modal-footer">
+                <!-- Botón para actualizar los datos -->
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+                <!-- Botón para cancelar la edición y volver a la página de inicio de sesión -->
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="window.location.href='/iniciarSesion'">Cancelar</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <footer class="FooterEditar">
+        <p>&copy; 2024 Tecnológico de Medellín Institución Universitaria.</p>
+    </footer>
+</body>

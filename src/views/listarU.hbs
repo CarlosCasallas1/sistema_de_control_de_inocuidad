@@ -1,0 +1,68 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <table class="Panelimg">
+                <br> 
+                <tr>
+                    <th><img src="img/logo PNG.png" alt=""></th>
+                    <th><img src="img/gobernacion.png" alt=""></th>
+                    <th><img src="img/gov.co.png" alt=""></th>
+                    <th><img src="img/COLCIENCIAS.png" alt=""></th>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <br><br> 
+            <a href="/" id="principal">Inicio</a>
+            <a href="/informacion" id="conoce">Conoce</a>
+            <a href="/conoce" id="conoce">Información</a>
+        </div>
+    </div>
+</div>
+<br> 
+
+
+<h1>Administración de usuarios</h1>
+
+
+<hr> 
+<!-- Inclusión de botones de búsqueda e inserción -->
+{{> btnBuscarU}}
+{{> btnIncertarU}}
+<hr> 
+
+<!-- Tabla de usuarios -->
+<table class="table">
+    <thead>
+        <tr>
+            <!-- Encabezados de la tabla -->
+            <th scope="col">Cédula</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Contraseña</th>
+            <th scope="col">Rol</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Iteración sobre los datos de usuarios -->
+        {{#each data}}
+        <tr>
+            <!-- Datos de cada usuario -->
+            <td>{{ID_Usuarios}}</td>
+            <td>{{Nombre}}</td>
+            <td>{{Apellidos}}</td>
+            <td>{{Correo}}</td>
+            <td>{{ContraseNa}}</td>
+            <td>{{Rol}}</td>
+            <td>
+                <!-- Inclusión del fragmento confirmarEliminacion -->
+                {{> confirmarEliminacion}}
+                <!-- Enlace para editar el usuario -->
+                <a href="/editarUsuarios/{{ID_Usuarios}}" class="btn btn-primary">Editar</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
