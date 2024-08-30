@@ -1,4 +1,4 @@
-<table>
+{{!-- <table>
     <thead>
     <tr>
         <th>Parámetros a revisar</th>
@@ -47,4 +47,142 @@
         <td></td>
     </tr>
     </tbody>
+</table> --}}
+
+
+<table>
+<tr>
+    <th ><img class="IColcafe" src="img/Colcafe.png" alt=""></th>
+    <th ><img class="ICamerons" src="img/Camerons.PNG" alt=""></th>
+    <th ><img class="IIndustrascafe" src="img/Industriascafe.PNG" alt=""></th>
+    <th ><img class="ITropicalcoffe" src="img/Tropicalcoffe.PNG" alt=""></th>
+</tr>
 </table>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-9">
+        </div>
+        <div class="col-md-3">
+            <br>
+            <!-- Botón de "Iniciar sesión" estilizado con Bootstrap y con clase personalizada -->
+            <a href="/" class="btn btn-primary iniciar-sesion">Cerrar sesión</a>
+        </div>
+    </div>
+</div>
+
+<h1>Registro Inocuidad</h1>
+
+<!-- Sección de parámetros y calificaciones -->
+<table class="calificacion-table">
+    <thead>
+        <tr>
+            <th>Parámetros a revisar</th>
+            <th>Calificación</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Limpieza del área</td>
+            <td>
+                <select class="calificacion-select">
+                    <option value="bueno">Bueno</option>
+                    <option value="malo">Malo</option>
+                    <option value="regular">Regular</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Condiciones estructurales</td>
+            <td>
+                <select class="calificacion-select">
+                    <option value="bueno">Bueno</option>
+                    <option value="malo">Malo</option>
+                    <option value="regular">Regular</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Elementos de limpieza</td>
+            <td>
+                <select class="calificacion-select">
+                    <option value="bueno">Bueno</option>
+                    <option value="malo">Malo</option>
+                    <option value="regular">Regular</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Objetos en desuso</td>
+            <td>
+                <select class="calificacion-select">
+                    <option value="bueno">Bueno</option>
+                    <option value="malo">Malo</option>
+                    <option value="regular">Regular</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Objetos extraños en proceso</td>
+            <td>
+                <select class="calificacion-select">
+                    <option value="bueno">Bueno</option>
+                    <option value="malo">Malo</option>
+                    <option value="regular">Regular</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Identificación de producto</td>
+            <td>
+                <select class="calificacion-select">
+                    <option value="bueno">Bueno</option>
+                    <option value="malo">Malo</option>
+                    <option value="regular">Regular</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Plagas</td>
+            <td>
+                <select class="calificacion-select">
+                    <option value="bueno">Bueno</option>
+                    <option value="malo">Malo</option>
+                    <option value="regular">Regular</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Alérgenos</td>
+            <td>
+                <select class="calificacion-select">
+                    <option value="bueno">Bueno</option>
+                    <option value="malo">Malo</option>
+                    <option value="regular">Regular</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Personal de área</td>
+            <td>
+                <select class="calificacion-select">
+                    <option value="bueno">Bueno</option>
+                    <option value="malo">Malo</option>
+                    <option value="regular">Regular</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Observaciones</td>
+            <td>
+            <input type="text" class="observaciones-input" placeholder="Ingrese sus observaciones">
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Inclusión de botones de edición y guardado -->
+<div class="user-actions-operario">
+    <a href="/editarUsuarios/{{ID_Usuarios}}" class="btn btn-primary-operario">Editar</a>
+    <a href="/guardarDatos" class="btn btn-primary-operario">Guardar</a>
+</div>

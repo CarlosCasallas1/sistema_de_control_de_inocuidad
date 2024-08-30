@@ -180,3 +180,35 @@
 }
 
 
+.calificacion-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calificacion-table th, .calificacion-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.calificacion-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.calificacion-select {
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.observaciones-input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 1rem;
+}

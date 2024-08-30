@@ -28,17 +28,23 @@ router.get('/inicio', indexController.inicio);
 //Acciones que solo pueden realizar usuarios autenticados, como ver la lista de usuarios,
 // editar información, etc. Estas rutas necesitan que el usuario haya iniciado sesión antes
 // de acceder a ellas.
-router.get('/listarU', indexController.listarUsuarios);
+router.get('/listarU', requireLogin, indexController.listarUsuarios);
 router.post('/insertarUsuarios', indexController.insertarUsuarios);
 router.post('/buscarUsuarios', indexController.buscarUsuarios);
 router.get('/iniciarSesion', indexController.iniciarSesion);
 router.post('/iniciarSesion', indexController.processLogin);
+
+ router.get('/Operario', indexController.Operario);
+// router.post('/Operario', indexController.processLogin);
+
 router.get('/editarUsuarios/:ID_Usuarios', indexController.editarUsuarios);
 router.get('/editarEstudiante/:ID_Usuarios', indexController.editarEstudiante);
 router.post('/actualizarUsuarios/:ID_Usuarios', indexController.actualizarUsuarios);
 router.post('/actualizarEstudiante/:ID_Usuarios', indexController.actualizarEstudiante);
 router.get('/confirmarEliminacion/:ID_Usuarios', indexController.mostrarConfirmacionEliminacion);
 router.post('/confirmarEliminacion/:ID_Usuarios', indexController.confirmarEliminacion);
+
+
 
 // Exportar el enrutador para que pueda ser utilizado en otros archivos
 export default router;

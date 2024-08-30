@@ -38,8 +38,8 @@
             <!-- Encabezados de la tabla -->
             <th scope="col">Cédula</th>
             <th scope="col">Nombre</th>
-            <th scope="col">Apellidos</th>
-            <th scope="col">Correo</th>
+            {{!-- <th scope="col">Apellidos</th> --}}
+            {{!-- <th scope="col">Correo</th> --}}
             <th scope="col">Contraseña</th>
             <th scope="col">Rol</th>
             <th>Acciones</th>
@@ -50,11 +50,11 @@
         {{#each data}}
         <tr>
             <!-- Datos de cada usuario -->
-            <td>{{ID_Usuario}}</td>
+            <td>{{ID_Usuarios}}</td>
             <td>{{Nombre}}</td>
-            <td>{{Apellidos}}</td>
-            <td>{{Correo}}</td>
-            <td>{{ContraseNa}}</td>
+            {{!-- <td>{{Apellidos}}</td> --}}
+            {{!-- <td>{{Correo}}</td> --}}
+            <td>{{Contrasena}}</td>
             <td>{{Rol}}</td>
             <td>
                 <!-- Inclusión del fragmento confirmarEliminacion -->

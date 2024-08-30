@@ -9,5 +9,8 @@
         {
             "path": "../../../../Proyecto de aula/Plantilla_U"
         }
-    ]
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "Plantilla_U"
+    }
 }
