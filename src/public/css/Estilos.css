@@ -1,560 +1,182 @@
-#inicio {
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    background-color: rgb(255, 204, 0);
-    color: black; /* Establece el color de texto negro */
-    padding: 5px 10px; /* Añade un poco de espacio alrededor del texto */
-    border-radius: 5px; /* Redondea los bordes */
-    display: inline-block; /* Utiliza inline-block para limitar el fondo al tamaño del texto */
-    margin: 10px;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* Se encuentra en la pagina de index-inicio Imagenes del banner superior colcafe*/
+.IColcafe {
+    width: 130px; 
+    margin-top:30px;
+    margin-left: -110px;
 }
 
-#principal {
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    background-color: rgb(255, 204, 0);
-    color: black; /* Establece el color de texto negro */
-    padding: 5px 10px; /* Añade un poco de espacio alrededor del texto */
-    border-radius: 5px; /* Redondea los bordes */
-    display: inline-block; /* Utiliza inline-block para limitar el fondo al tamaño del texto */
-    margin: 10px;
-}
-#conoce {
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    background-color: rgb(255, 204, 0);
-    color: black; /* Establece el color de texto negro */
-    padding: 5px 10px; /* Añade un poco de espacio alrededor del texto */
-    border-radius: 5px; /* Redondea los bordes */
-    display: inline-block; /* Utiliza inline-block para limitar el fondo al tamaño del texto */
-    margin: 10px;
+.ICamerons {
+    width: 80px; 
+    margin-top: 30px;
+    margin-left: 10px;
 }
 
-#Mapa {
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    background-color: rgba(0, 4, 255, 0.911);
-    color: black; /* Establece el color de texto negro */
-    padding: 5px 10px; /* Añade un poco de espacio alrededor del texto */
-    border-radius: 5px; /* Redondea los bordes */
-    display: inline-block; /* Utiliza inline-block para limitar el fondo al tamaño del texto */
-    margin: 10px;
+.IIndustrascafe {
+    width: 60px; 
+    margin-top: 30px;
+    margin-left: 30px;
 }
-/* clase comollegar */
-#tituloComoLegar {
-    display: flex;
-    margin-left: 520px; 
-    
-}
-.mapouter{
-    position: relative;
-    text-align: right;
-    height: 400px;
-    width: 1350px;
-}
-.gmap_canvas{
-    overflow: hidden;
-    background: none !important;
-    height: 400px;
-    width: 1350px;
+
+.ITropicalcoffe {
+    width: 100px; 
+    margin-top: 30px;
+    margin-left: 10px;
 }
 
 
-
-.Panelimg img {
-    max-width: 80px;
-    max-height: 80px;
-    position: relative;
-    top: 10px;
-    margin-right: 10px;
+/* Pagina index Parametros de imegen principal con titulos y texto*/
+.PrincipalImg{
+    width: 350px; 
+    margin-top: -20px;
+    margin-left: -80px;
+    border-radius: 8px; 
 }
 
-
-
-
-.Textonav{
-    width: 400px; /* Ancho deseado del fieldset */
-    height: 140px; /* Altura deseada del fieldset */
-    padding: 20px; /* Añade espacio interno al fieldset */
-    border: 1px solid #ccc; /* Añade un borde al fieldset */
-    position: relative;
-    top: -175px; /* Puedes ajustar este valor según lo necesites */
-    font-size: 12px;
+.Titulo {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
 }
 
-.Navegacion{
-    font-size: 13px;
-    text-align: center;
-}
-
-
-.Titulo{
-    margin-left: 110px;
-    position: relative;
-    top: -150px; /* Puedes ajustar este valor según lo necesites */
-    font-size: 20px;
-}
-
-.Informaimg {
-    width: 120px; /* Ancho de 50px */
-    height: 100px; /* Altura automática para mantener la proporción */
-    display: block;
-    margin: 0 auto; /* Centra las imágenes horizontalmente */
-    position: relative;
-    top: -150px; /* Puedes ajustar este valor según lo necesites */
-    border: 1.5px solid rgba(8, 8, 7, 0.877);
-    border-radius: 1.5px;
-}
-
-
-.TextoTDEM{
-    width: 200px; /* Ancho deseado del fieldset */
-    height: 100px; /* Altura deseada del fieldset */
-    padding: 15px; /* Añade espacio interno al fieldset */
-    border: 1px solid #ccc; /* Añade un borde al fieldset */
-    position: relative;
-    top: -150px; /* Puedes ajustar este valor según lo necesites */
-    font-size: 11px;
-
-}
-
-.Titulo2{
-    position: relative;
-    top: -150px; /* Puedes ajustar este valor según lo necesites */
-    text-align: center;
-    font-size: 15px;
-}
-
-.Titulo3{
-    position: relative;
-    top: -500px; /* Puedes ajustar este valor según lo necesites */
-    text-align: center;
-    margin-right: -600px;
-}
-
-.Contacto1 {
-    width: 290px; /* Ancho deseado del fieldset */
-    height: 180px; /* Altura deseada del fieldset */
-    padding: 25px; /* Añade espacio interno al fieldset */
-    border: 1px solid #ccc; /* Añade un borde al fieldset */
-    position: relative;
-    top: -10px; /* Puedes ajustar este valor según lo necesites */
-    font-size: 14px;
-    font-weight: normal; 
-
-}
- 
-
-/* cambio index */
-
-
-.Index-tecnologica img {
-    max-width: 500px; /* Establece el ancho máximo */
-    max-height: 160px; /* Establece la altura máxima */
-    margin-right: 500px; /* Ajusta este valor según sea necesario para el espacio que 
-    desees entre la imagen y el contenido a su derecha */
-    margin-left: 35px;
-    position: relative;
-    top: -80px; /* Puedes ajustar este valor según lo necesites */
-    border: 2px solid rgba(8, 8, 7, 0.877);
-}
-
-.graduacion img {
-    max-width: 450px; /* Establece el ancho máximo */
-    max-height: 450px; /* Establece la altura máxima */
-    margin-top: -110px; /* Ajusta la posición vertical hacia abajo */
-    margin-left: -120px;
-    border: 3px solid rgba(255, 204, 0, 0.877);
-    border-radius: 5px; 
-}
-
-.Textop{
-    margin-left: -450px;
-    position: relative;
-    top: 250px;
-    text-align: center;
-    font-weight: normal;
-    }
-    
-    .Social{
-        width: 50px;
-        height: 40px;
-        position: relative;
-        top: 10px;
-        margin: 0 auto; /* Centra */
-        
-    }
-
-
-
-.Socialtext{
-    font-size: 15px;
-  
-}
-
-.Textop{
-margin-left: -450px;
-position: relative;
-top: 250px;
-text-align: center;
-font-weight: normal;
-}
-
-.informacion {
-    text-align: left;
-    font-family: 'Nunito';
-    font-style: bolder;
-    font-size: 25px;
-    border: none;
-    margin-right: 1400px; /* Ajusta este valor según sea necesario para el espacio que 
-    desees entre la imagen y el contenido a su derecha */
-    position: relative;
-    top: 20px; /* Puedes ajustar este valor según lo necesites */
-    cursor: pointer;
-    border: 10px;
-    
-}
-
-.informacion1 {
-    text-align: left;
-    font-family: 'Nunito';
-    font-style: bolder;
-    font-size: 20px;
-    border: none;
-    margin-left: 1100px; /* Ajusta este valor según sea necesario para el espacio que 
-    desees entre la imagen y el contenido a su derecha */
-    position: relative;
-    top: -450px; /* Puedes ajustar este valor según lo necesites */
-    cursor: pointer;
-    border: 10px;
-    
-}
-
-
-
-
-.Textoinfo{
-    text-align: center;
-    font-size: 45px;
-    position: relative;
-    top: -40px; /* Puedes ajustar este valor según lo necesites */
-}
-
-.Textoinfo1{
-    text-align: center;
+.Subtitulo {
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 30px;
-    position: relative;
-    top: -70px; /* Puedes ajustar este valor según lo necesites */
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    margin-left: 130px;
 }
 
-.Datos{
-    position: relative;
-    top: -40px; /* Puedes ajustar este valor según lo necesites */
-    position: relative;
-    top: -80px; /* Puedes ajustar este valor según lo necesites */
-    font-size: 30px;
-}
-
-.Boton{
-cursor: pointer;
-position: relative;
-top: -60px; /* Puedes ajustar este valor según lo necesites */
-text-align: center;
-margin-right: 1400px;
-}
-
-.Boton1{
-    cursor: pointer;
-    position: relative;
-    top: -400px; /* Puedes ajustar este valor según lo necesites */
-    text-align: center;
-    margin-left: 520px;
-    
-    }
-
-.ImgE{
-    max-width: 300px; /* Establece el ancho máximo */
-    max-height: 300px; /* Establece la altura máxima */
-    margin-left: 100px; /* Ajusta este valor según sea necesario para el espacio que 
-    desees entre la imagen y el contenido a su derecha */
-    position: relative;
-    top: 20px; 
-}
-
-.Lista{
-    margin-left: 100px; /* Ajusta este valor según sea necesario para el espacio que 
-    desees entre la imagen y el contenido a su derecha */
-    position: relative;
-    top: 20px; 
-}
-
-.ImgE1{
-    max-width: 300px; /* Establece el ancho máximo */
-    max-height: 300px; /* Establece la altura máxima */
-    margin-left: 100px; /* Ajusta este valor según sea necesario para el espacio que 
-    desees entre la imagen y el contenido a su derecha */
-    position: relative;
-    top: 33px; 
-
-}
-
-.Lista1{
-    margin-left: 100px; /* Ajusta este valor según sea necesario para el espacio que 
-    desees entre la imagen y el contenido a su derecha */
-    position: relative;
-    top: 30px; 
-}
-
-.ImgE2{
-    max-width: 300px; /* Establece el ancho máximo */
-    max-height: 300px; /* Establece la altura máxima */
-    margin-left: 100px; /* Ajusta este valor según sea necesario para el espacio que 
-    desees entre la imagen y el contenido a su derecha */
-    position: relative;
-    top: 5px; 
-
-}
-
-.Lista2{
-    margin-left: 100px; /* Ajusta este valor según sea necesario para el espacio que 
-    desees entre la imagen y el contenido a su derecha */
-    position: relative;
-    top: 10px; 
-}
-
-.Footer2{
-    position: relative;
-    top: 80px; 
-    font-size: 15px;
-}
-
-
-
-.Enlaces {
-    font-size: 20px;
-    margin-left: 1370px;
-    position: relative;
-    top: 150px; /* Puedes ajustar este valor según lo necesites */
-}
-
-.Enlaces2{
-    font-size: 15px;
-
-}
-
-
-.Conoce{
-    font-size: 13px;
-}
-
-.Login{
-    font-size: 40px
-}
-
-.Footer1{
-    position: relative;
-    top: -100px; 
-    font-size: 8px;
-    text-align: center;
-}
-
-.container {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.Tituloinfo{
-    margin-left: 430px;
-}
-
-.TituloConoce{
-    margin-left: 430px;
-}
-
-.Contactotitulo{
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.TituloConoce2{
-    margin-left: 300px;
-    position: relative;
-    top: -15px; /* Puedes ajustar este valor según lo necesites */
-    font-size: 20px;
-}
-
-
-
-
-
-
-
-
-/* ESTILOS CARLOS */
-
-
-
-.ImgINICIO {
-    max-width: 450px;
-    max-height: 450px;
-    margin-top: -500px;
-    margin-left: 800px;
-}
-
-.ImgINICIO img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-/* informacion */
-#titulo-container-informacion {
-    display: flex;
-    margin-left: 500px; 
-}
-
-
-
-#tableInformacion {
-    border-collapse: collapse; /* Fusiona los bordes de las celdas */
-    width: 100%; /* O ajusta el ancho según tus necesidades */
-}
-
-#tableInformacion th, #tableInformacion td {
-    padding: 40px; /* Añade un espacio interno a las celdas */
-    text-align: left; /* Alinea el texto a la izquierda dentro de las celdas */
-}
-
-
-
-
-
-#tableInformacion th:nth-child(2),
-#tableInformacion td:nth-child(2) {
-    border-left: 1px solid black; /* Añade un borde izquierdo a la segunda columna */
-}
-
-#tableInformacion th:last-child,
-#tableInformacion td:last-child {
-    border-left: 1px solid black; /* Añade un borde izquierdo a la última columna */
-}
- 
-
-.SocialContainer {
-    display: flex; /* Usa flexbox para alinear las imágenes horizontalmente */
-    justify-content: flex-end; /* Alinea las imágenes al final del contenedor */
-}
-
-.SocialtableInformacion2 {
-    width: 50px; /* Ajusta el ancho según sea necesario */
-    margin-left: 10px; /* Espacio entre las imágenes */
-}
-
-
-#tableInformacion0 {
-    float: right;
-    width: 300px;
-    display: flex; /* Usa flexbox para alinear las imágenes horizontalmente */
-    justify-content: flex-end; /* Alinea las imágenes al final del contenedor */
-}
-
-
-
-
-/* estilos inicio.hbs */
-
-
-
-
-#login-form-Inicio {
-    margin: 0 auto; 
-    width: 50%;
-    /* background-color:  #4a8ef381;  */
-    background-color:  #0141a1be; /* Color de fondo */
-
-     margin-left: 390px; 
-    /* margin-left: 600px; */
-}
-
-#fieldset-Inicio  {
-    border: 1px solid #585858;
-    padding: 20px;
-    border-radius: 5px;
-    font-weight: bold; 
-}
-
-input[type="text"],
-select {
-    width: 100%;
-    padding: 10px;
+.TextoInfo {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
     margin-bottom: 10px;
-    border: 1px solid #585858;
-    border-radius: 5px;
-    background-color: #4a5bf327; /* Color de fondo */
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #0056b3;
+/* Pagina index Contenedor para el contenido de h1, p, y h3 */
+.informacion {
+    border: 3px solid #ccc; /* Borde del cuadro */
+    padding: 10px; /* Espaciado interior */
+    margin: 50px 0; /* Espaciado exterior */
+    background-color: #f9f9f9; /* Color de fondo claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    margin-top: 0px;
+    max-width: 700px; /* Define un ancho máximo para el footer */
+    margin-left: 70px;
 }
 
-/* Estilos del pie de página */
+
+/* Pagina index Estilos para el botón de iniciar sesión */
+.iniciar-sesion {
+    display: inline-block; /* Asegura que el botón se comporte como un elemento en línea para centrado */
+    text-align: center; /* Centra el texto dentro del botón */
+    background-color: #d9534f; /* Color de fondo rojo */
+    border: 1px solid #d9534f; /* Borde rojo */
+    color: #fff; /* Color del texto en blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transición suave para los cambios de color */
+    margin-top: -130px;
+    margin-left: 65px;
+}
+
+.iniciar-sesion:hover {
+    background-color: #c9302c; /* Color rojo más oscuro al pasar el ratón */
+    border-color: #c9302c; /* Borde rojo más oscuro */
+}
+
+
+/* Pagina index-Inicio Estilos para el contenedor del footer */
 .FooterInicio {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #33333381;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 13px;
+    line-height: 0.2;
+    color: #333;
+    border: 1px solid #ccc; /* Borde del cuadro */
+    padding: 15px; /* Espaciado interior, ajusta el valor según tus necesidades */
+    margin: 20px auto; /* Espaciado exterior, centrado horizontalmente */
+    background-color: #f9f9f9; /* Color de fondo claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    text-align: center; /* Centra el texto */
+    max-width: 600px; /* Define un ancho máximo para el footer */
+    width: 100%; /* Asegura que el footer ocupe el ancho del contenedor */
+    min-height: 100px; /* Establece una altura mínima */
+    position: relative; /* Permite ajustar la posición del footer */
+    bottom: 0; /* Alinea el footer al fondo de la página si es necesario */
 }
 
-.ImagenFondoInicio {
-    background-image: url('../img/Cybersecurity.avif'); /* Ruta local de la imagen */
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-#login-formInicio div  {
-    text-align: center;
+.footer-image img {
+    width: 700px; /* Tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: -100px;
 }
 
 
+/* ////////////////////////////PAGINA INICIO///////////////////////////////////////////////////*/
 
-/* editarUsuarios */
 
-#login-form-editarUsuarios {
-    margin: 35px auto; /* Ajusta el margen superior e inferior y centra horizontalmente */
-    width: calc(30% - 70px); /* Resta el doble del margen izquierdo para mantener el ancho del formulario */
-    max-width: 600px; /* Establece un ancho máximo para evitar que el formulario se extienda demasiado */
-    background-color:  #0f63e281; /* Color de fondo */
-    border-radius: 10px; /* Agrega esquinas redondeadas */
-    padding: 10px; /* Agrega espacio interno para que el contenido no toque los bordes */
-}
-    
-#formularioEditarUsuariosModificado {
-    padding: 25px; /* Ajusta el relleno del formulario interior */
-    border: 3px solid #000000c9;
-    border-radius: 5px;
-    font-weight: bold;  
-}   
-
-.formularioEditar {
-    background-image: url('../img/securityicon.avif'); /* Ruta local de la imagen */
-    background-size: 100%;
-    background-repeat: no-repeat;
+/* Estilos para el cuadro de formulario */
+.fieldset-Inicio {
+    border: 3px solid #ccc; /* Borde del cuadro */
+    padding: 20px; /* Espaciado interior */
+    margin: 20px auto; /* Espaciado exterior y centrado horizontal */
+    background-color: #f9f9f9; /* Color de fondo claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    max-width: 500px; /* Limita el ancho máximo */
+    margin-top: 50px;
 }
 
-.FooterEditar {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #00000081;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 5px 0;
+
+/* Estilos para los botones */
+.btn {
+    display: inline-block; /* Asegura que el botón se comporte como un elemento en línea para centrado */
+    text-align: center; /* Centra el texto dentro del botón */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transición suave para los cambios de color */
 }
+
+.iniciar-sesion1 {
+    background-color: #d9534f; /* Color de fondo rojo */
+    border: 1px solid #d9534f; /* Borde rojo */
+    color: #fff; /* Color del texto en blanco */
+    margin-right: 120px;
+    margin-top: -0px;
+}
+
+.iniciar-sesion1:hover {
+    background-color: #c9302c; /* Color rojo más oscuro al pasar el ratón */
+    border-color: #c9302c; /* Borde rojo más oscuro */
+}
+
+.cancelar {
+    background-color: #6c757d; /* Color de fondo gris */
+    border: 1px solid #6c757d; /* Borde gris */
+    color: #fff; /* Color del texto en blanco */
+    margin-right: 10px;
+
+}
+
+.cancelar:hover {
+    background-color: #5a6268; /* Color gris más oscuro al pasar el ratón */
+    border-color: #5a6268; /* Borde gris más oscuro */
+}
+
+

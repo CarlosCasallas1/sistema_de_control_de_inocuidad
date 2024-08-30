@@ -1,52 +1,64 @@
-<!-- Cuerpo de la página con una imagen de fondo -->
-<body class="ImagenFondoInicio">
-    <table class="Panelimg">
+<form id="login-form-Inicio" action="/iniciarSesion" method="post">
+    <!-- Sección de imágenes del banner superior -->
+    <table>
         <tr>
-            <th><img src="img/logo PNG.png" alt="Logo PNG"></th>
-            <th><img src="img/gobernacion.png" alt="Gobernación"></th>
-            <th><img src="img/gov.co.png" alt="Gobierno"></th>
-            <th><img src="img/COLCIENCIAS.png" alt="COLCIENCIAS"></th>
+            <th><img class="IColcafe" src="img/Colcafe.png" alt=""></th>
+            <th><img class="ICamerons" src="img/Camerons.PNG" alt=""></th>
+            <th><img class="IIndustrascafe" src="img/Industriascafe.PNG" alt=""></th>
+            <th><img class="ITropicalcoffe" src="img/Tropicalcoffe.PNG" alt=""></th>
         </tr>
     </table>
 
-    <!-- Formulario de inicio de sesión -->
-    <form id="login-form-Inicio" action="/iniciarSesion" method="post">
-        <!-- Conjunto de campos del formulario -->
-        <fieldset id ='fieldset-Inicio'>
-            <div><h2>Inicio de sesión</h2></div>   
-            
-            <!-- Selección del rol -->
-            <div class="mb-3">
-                <label for="Rol">Rol:</label>
-                <select id="Rol" name="Rol" required>
-                    <option value="Estudiante">Estudiante</option>
-                    <option value="Administrador">Administrador</option>
-                </select>
-            </div>
+    <!-- Conjunto de campos del formulario -->
+    <fieldset class="fieldset-Inicio">
+        <div><h2>Inicio de sesión</h2></div>
 
-            <!-- Campo para el documento -->
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Documento:</label>
-                <input type="text" name="ID_Usuarios" class="form-control" id="exampleFormControlInput1" placeholder="Documento">
-            </div>
+        <!-- Selección del rol -->
+        <div class="mb-3">
+            <label for="Rol">Rol:</label>
+            <select id="Rol" name="Rol" required>
+                <option value="Operario">Operario</option>
+                <option value="Administrador">Administrador</option>
+            </select>
+        </div>
 
-            <!-- Campo para la contraseña -->
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Contraseña:</label>
-                <input type="text" name="ContraseNa" class="form-control" id="exampleFormControlInput1" placeholder="Contraseña">
-            </div>
+        <!-- Campo para el documento -->
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Documento:</label>
+            <input type="text" name="ID_Usuarios" class="form-control" id="exampleFormControlInput1" placeholder="Documento">
+        </div>
 
-            <!-- Botones de acción del formulario -->
-            <div class="modal-footer">
-                <!-- Botón para cancelar el inicio de sesión -->
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="window.location.href='/'">Cancelar</button>
-                <!-- Botón para iniciar sesión -->
-                <button type="submit" class="btn btn-primary">Ingresar</button>
-            </div>
-        </fieldset>
-    </form>
+        <!-- Campo para la contraseña -->
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Contraseña:</label>
+            <input type="text" name="Contrasena" class="form-control" id="exampleFormControlInput1" placeholder="Contraseña">
+        </div>
 
-    <footer class="FooterInicio">
-        <p>&copy; 2024 Tecnológico de Medellín Institución Universitaria.</p>
-    </footer>
-</body>
+        <!-- Botones de acción del formulario -->
+        <div class="modal-footer">
+            <!-- Botón para cancelar el inicio de sesión -->
+            <button type="button" class="btn cancelar" onclick="window.location.href='/'">Cancelar</button>
+            <!-- Botón para iniciar sesión -->
+            <button type="submit" class="btn iniciar-sesion1">Ingresar</button>
+        </div>
+    </fieldset>
+
+
+    <!-- Contenedor de la tabla del footer -->
+<table >
+    <tr>
+        <!-- Celda para la imagen -->
+        <td class="footer-image">
+            <img src="img/footer.png" alt="Colcafé Logo">
+        </td>
+        <!-- Celda para el contenido del footer -->
+        <td class="footer-content">
+            <footer class="FooterInicio">
+                <p>&copy; 2024 Colcafé, todos los derechos reservados</p>
+                <p>Dirección: Cl. 8 Sur, Guayabal, Medellín, Guayabal, Medellín, Antioquia</p>
+                <p>Teléfono: 01-800-0510777</p>
+            </footer>
+        </td>
+    </tr>
+</table>
+

@@ -1,21 +1,13 @@
 // Importar la función getConnection desde el módulo de conexión
 import { getConnection } from "../models/connection"
+import sql from 'mssql';
 
-// Importar el módulo crypto para encriptar contraseñas
 import crypto from 'crypto';
-
-// Función para encriptar la contraseña/////////////////////////////////
-function encryptPassword(password) {
-    // Crear un objeto hash utilizando el algoritmo SHA-256
-    const hash = crypto.createHash('sha256');
-    // Actualizar el hash con la contraseña proporcionada
-    hash.update(password);
-    // Devolver el hash en formato hexadecimal
-    return hash.digest('hex');
-}
 
 // Objeto que contiene las funciones del controlador
 const indexController = {}
+
+
 
 // Definición de la función para desencriptar la contraseña
 function decryptPassword(hashedPassword) {
@@ -42,31 +34,49 @@ indexController.inicio=(req, res) =>{
         title : 'pagina registro inicio'
     });
 }
-indexController.comoLlegar=(req, res) =>{
-    res.render('comoLlegar',{
-        title : 'Mapa'
-    });
-}
-indexController.conoce=(req, res) =>{
-    res.render('conoce',{
-        title : 'pagina conoce'
-    });
-}
 
-indexController.contacto=(req, res) =>{
-    res.render('contacto',{
-        title : 'pagina contacto'
-    });
-}
-indexController.informacion=(req, res) =>{
-    res.render('informacion',{
-        title : 'pagina informacion'
-    });
-}
+// Función para encriptar contraseñas
+function encryptPassword(password) {
+    const hash = crypto.createHash('sha256');
+    hash.update(password);
+    return hash.digest('hex');
+}   
+
+
 //////////////////////////////////////////////////////////////////////////
+// Controlador para insertar usuarios en la base de datos
+indexController.insertarUsuarios = async (req, res) => {
+    try {
+        const { ID_Usuarios, Nombre, ID_InocuidadFK, Contrasena, Rol } = req.body;
+        console.log({ ID_Usuarios, Nombre, ID_InocuidadFK, Contrasena, Rol }); // Verifica los valores aquí
+        
+        // Verifica si ID_InocuidadFK tiene un valor
+        if (ID_InocuidadFK === undefined || ID_InocuidadFK === null) {
+            throw new Error("ID_InocuidadFK no puede ser null");
+        }
+        
+        const hashedPassword = encryptPassword(Contrasena);
+        const conn = await getConnection();
+        const query = `
+            INSERT INTO Usuarios (ID_Usuarios, Nombre, ID_InocuidadFK, Contrasena, Rol) 
+            VALUES (@ID_Usuarios, @Nombre, @ID_InocuidadFK, @Contrasena, @Rol)
+        `;
+        await conn.request()
+            .input("ID_Usuarios", sql.Int, ID_Usuarios)
+            .input("Nombre", sql.VarChar, Nombre)
+            .input("ID_InocuidadFK", sql.Int, ID_InocuidadFK)
+            .input("Contrasena", sql.VarChar, hashedPassword)
+            .input("Rol", sql.VarChar, Rol)
+            .query(query);
+        res.redirect('/listarU');
+    } catch (error) {
+        console.error('Error al insertar usuario:', error);
+        res.status(500).send('Error al insertar usuario');
+    }
+};
 
 //Controladores para el manejo de solicitudes del usuario
-
+/*
 // Controlador para insertar usuarios en la base de datos
 indexController.insertarUsuarios = async (req, res) => {
     try {
@@ -97,7 +107,7 @@ indexController.insertarUsuarios = async (req, res) => {
         console.log(error);
     }
 };
-
+*/
 // Controlador para listar usuarios desde la base de datos
 indexController.listarUsuarios = async (req, res)=> {
     try {
@@ -152,7 +162,7 @@ indexController.buscarUsuarios = async (req, res)=> {
         const {txtBuscar} = req.body;
         
         // Realizar consulta SQL para buscar usuarios por nombre o apellidos
-        const result = await conn.request().query("SELECT * FROM Usuarios WHERE Nombre = '" + txtBuscar + "'or Apellidos = '" + txtBuscar + "'");
+        const result = await conn.request().query("SELECT * FROM Usuarios WHERE Nombre = '" + txtBuscar +"'");
         
         // Renderizar una plantilla de listar usuarios y enviarla al cliente
         res.render('listarU',{
@@ -188,7 +198,43 @@ indexController.editarUsuarios = async (req, res)=> {
     }
 }
 
+indexController.actualizarUsuarios = async (req, res) => {
+    try {
+        // Establecer conexión con la base de datos
+        const conn = await getConnection();
+        
+        // Obtener el ID del usuario a actualizar de los parámetros de la solicitud
+        const { ID_Usuarios } = req.params;
+        
+        // Obtener los datos actualizados del usuario del cuerpo de la solicitud
+        const { Nombre, Contrasena, Rol } = req.body; // Se espera que estos datos vengan de un formulario HTML
+        
+        // Validar que los datos necesarios están presentes
+        if (!ID_Usuarios || !Nombre || !Contrasena || !Rol) {
+            return res.status(400).send('Faltan datos necesarios.');
+        }
+        
+        // Encriptar la contraseña antes de almacenarla en la base de datos
+        const hashedPassword = encryptPassword(Contrasena);
+        
+        // Realizar la consulta SQL para actualizar los datos del usuario
+        const result = await conn.request()
+            .input("ID_Usuarios", ID_Usuarios)
+            .input("Nombre", Nombre)
+            .input("Contrasena", hashedPassword) // Se usa la contraseña encriptada
+            .input("Rol", Rol)
+            .query("UPDATE Usuarios SET Nombre = @Nombre, Contrasena = @Contrasena, Rol = @Rol WHERE ID_Usuarios = @ID_Usuarios");
+        
+        // Redireccionar al usuario a alguna página después de actualizar los datos
+        res.redirect('/listarU');
+    } catch (error) {
+        // Manejar errores, si los hay, imprimiéndolos en la consola
+        console.log('Error en la actualización de usuario:', error);
+        res.status(500).send('Error al actualizar el usuario.');
+    }
+}
 
+/*
 // Función para actualizar la información de un usuario en la base de datos
 indexController.actualizarUsuarios = async (req, res)=> {
     try {
@@ -221,7 +267,7 @@ indexController.actualizarUsuarios = async (req, res)=> {
         console.log(error);
     }
 }
-
+*/
 
 indexController.editarEstudiante = async (req, res)=> {
     try {
@@ -281,8 +327,62 @@ indexController.iniciarSesion = async (req, res) => {
         console.log(error);
     }
 }
+// Controlador para procesar el inicio de sesión
+indexController.processLogin = async (req, res) => {
+    const { ID_Usuarios, Contrasena, Rol } = req.body;
+    try {
+        // Establecer conexión con la base de datos
+        const conex = await getConnection();
+        
+        // Consulta para buscar al usuario por su ID
+        const query = "SELECT ID_Usuarios, Nombre, Rol, Contrasena FROM Usuarios WHERE ID_Usuarios = @ID_Usuarios";
+        const result = await conex.request()
+            .input("ID_Usuarios", ID_Usuarios)
+            .query(query);
 
+        // Verificar si se encontró algún usuario con el ID proporcionado
+        if (result.recordset.length > 0) {
+            // Obtener la contraseña almacenada en la base de datos
+            const storedPassword = result.recordset[0].Contrasena;
+            
+            // Comparar la contraseña proporcionada encriptada con la contraseña almacenada
+            if (encryptPassword(Contrasena) === storedPassword) {
+                const userRol = result.recordset[0].Rol;
+                // Verificar si se seleccionó un rol y si el usuario tiene ese rol
+                if (Rol && userRol !== Rol) {
+                    res.redirect('/?error=Rol%20incorrecto');
+                    return;
+                }
+                // Redireccionar al usuario basado en su rol
+                if (userRol === 'Administrador') {
+                    req.session.userID = result.recordset[0].ID_Usuarios;
+                    res.redirect('/listarU');
+                } else if (userRol === 'Operario') {
+                    req.session.userID = result.recordset[0].ID_Usuarios;
+                    res.redirect('/iniciarSesion');
+                } else {
+                    req.session.userID = result.recordset[0].ID_Usuarios;
+                    res.redirect('/');
+                }
+            } else {
+                // Redireccionar si las credenciales son incorrectas
+                res.redirect('/?error=Credenciales%20incorrectas');
+            }
+        } else {
+            // Redireccionar si el usuario no se encuentra
+            res.redirect('/?error=Credenciales%20incorrectas');
+        }
+    } catch (error) {
+        // Manejar errores, si los hay, imprimiéndolos en la consola
+        console.log('Error en el proceso de inicio de sesión:', error);
+        res.redirect('/?error=Error%20del%20servidor');
+    }
+};
 
+// Exportar el controlador para que pueda ser utilizado en otros archivos
+export default indexController;
+
+/*
 // Controlador para procesar el inicio de sesión
 indexController.processLogin = async (req, res) => {
     const { ID_Usuarios, ContraseNa, Rol } = req.body;
@@ -336,3 +436,4 @@ indexController.processLogin = async (req, res) => {
 
 // Exportar el controlador para que pueda ser utilizado en otros archivos
 export default indexController;
+*/

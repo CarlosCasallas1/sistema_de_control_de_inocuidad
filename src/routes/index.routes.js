@@ -23,16 +23,12 @@ function requireLogin(req, res, next) {
 //sin iniciar sesión, como la página de inicio, contacto, etc.
 router.get('/', indexController.index);
 router.get('/inicio', indexController.inicio);
-router.get('/conoce', indexController.conoce);
-router.get('/contacto', indexController.contacto);
-router.get('/informacion', indexController.informacion);
-router.get('/comoLlegar', indexController.comoLlegar);
 
 // Rutas que requieren autenticación //
 //Acciones que solo pueden realizar usuarios autenticados, como ver la lista de usuarios,
 // editar información, etc. Estas rutas necesitan que el usuario haya iniciado sesión antes
 // de acceder a ellas.
-router.get('/listarU', requireLogin, indexController.listarUsuarios);
+router.get('/listarU', indexController.listarUsuarios);
 router.post('/insertarUsuarios', indexController.insertarUsuarios);
 router.post('/buscarUsuarios', indexController.buscarUsuarios);
 router.get('/iniciarSesion', indexController.iniciarSesion);

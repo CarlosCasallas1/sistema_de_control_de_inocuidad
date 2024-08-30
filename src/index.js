@@ -9,6 +9,7 @@ import router from './routes/index.routes'; // Importa las rutas definidas en in
 import session from 'express-session'; // Middleware para la gestión de sesiones
 import crypto from 'crypto'; // Módulo criptográfico para encriptar contraseñas
 
+
 const app = express(); // Inicializa la aplicación Express
 
 // Configuración de sesiones de Express
@@ -88,7 +89,7 @@ app.post('/login', async (req, res) => {
     }
 });
 
-// Escucha en el puerto 8082
-app.listen(8082, () => {
-    console.log("Activo en localhost:8082");
+// Escucha en el puerto 8083
+app.listen(8083, () => {
+    console.log("Activo en localhost:8083");
 });
